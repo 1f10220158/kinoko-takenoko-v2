@@ -29,7 +29,7 @@ def answer():
     for i in range(len(messages)):
         message = messages[i]
         if re.search(r'^https://|^http://', message):
-            message = '<a href="' + message + '">' + message +'<a>'
+            message = '<a href="' + message + '">' + message +'<\a>'
         message = re.sub(r'&', r'&amp;', message)
         message = re.sub(r'<', r'&lt;', message)
         message = re.sub(r'>', r'&gt;', message)
